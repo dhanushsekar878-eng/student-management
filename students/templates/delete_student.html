@@ -1,0 +1,7 @@
+def delete_student(request,id):
+student=got_object_or_484(student,id=id)
+if requst.method=="POST":
+student.delete()
+return redirect('student_list')
+return redirect('student_list')
+return render(requst,"delete_student.html",{'student':student})

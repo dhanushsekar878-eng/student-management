@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Registration</title>
+</head>
+<body>
+<h1>Student Registration</h1>
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Register</button>
+</form>
+
+{% if submitted_data %}
+<h2>Registration successfully</h2>
+<p>Name: {{ submitted_data.name }}</p>
+<p>Email: {{ submitted_data.email }}</p>
+<p>Age: {{ submitted_data.age }}</p>
+<p>Course: {{ submitted_data.course }}</p>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Student Courses</h1>
+<table border="1">
+<tr><th>Name</th><th>Course</th></tr>
+{% for s in students %}
+<tr><td>{{ s.name }}</td><td>{{ s.course }}</td></tr>
+{% endfor %}
+</table>
+<br><a href="/student_list/">Back</a>
+</body>
+</html>
